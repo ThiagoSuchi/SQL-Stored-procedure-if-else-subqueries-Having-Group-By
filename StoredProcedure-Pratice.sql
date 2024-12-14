@@ -71,7 +71,7 @@ main: begin
 	declare contador tinyint unsigned default 0;
     declare soma tinyint default 0;
     if limite < 1 then
-		select 'O valor ínserido deve ser maior que zero' as Erro;
+		select 'O valor inserido deve ser maior que zero' as Erro;
         leave main;
 	end if;
     repeat
@@ -84,3 +84,4 @@ end //
 DELIMITER ;
 
 call loopComRepeatIf(10);
+call loopComRepeatIf(0);
